@@ -1,0 +1,27 @@
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Django
+*.log
+
+# Node / Angular
+node_modules/
+.angular/
+
+# PyCharm / IDE
+.idea/
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Variables de entorno / secretos
+.env
+.env.*
+
+# Base de datos
+db.sqlite3

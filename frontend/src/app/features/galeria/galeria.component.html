@@ -1,0 +1,19 @@
+
+<!-- Seccion de la galeria -->
+<section class="galeria">
+  <!-- Contenedor y titulo centrado -->
+  <div class="container">
+    <h1 class="titulo-fuente text-center mb-4 ">Galería</h1>
+    <p class="atma-light  h3">Nuestros logros sois vosotr@s</p>
+    <!-- Grid con responsive -->
+    <div class="row g-3">
+      <!-- Iteraccion en el array de imagenes por su id -->
+      <div class="col-6 col-md-6 col-lg-3" *ngFor="let id of ids">
+        <div class="card-galeria">
+          <img [src]="'assets/fotos_galeria/' + id + '.jpg'" alt="Foto galería" class="img-fluid rounded">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

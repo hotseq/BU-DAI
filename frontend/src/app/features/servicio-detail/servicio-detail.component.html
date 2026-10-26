@@ -1,0 +1,29 @@
+<p *ngIf="error">{{ error }}</p> <!-- Por si hay errores -->
+
+<!-- Boton para volver -->
+<div class="btn-volver">
+  <a href="/servicios" class="cta"> <!-- Ruta a la seccion de servicios -->
+    <svg width="13px" height="10px" viewBox="0 0 13 10">
+      <path d="M12,5 L1,5"></path>
+      <polyline points="5 1 1 5 5 9"></polyline>
+    </svg>
+    <span>VOLVER A SERVICIOS</span>
+  </a>
+</div>
+
+<!-- Estado de la pagina mientras se obtiene info -->
+<p *ngIf="cargando">Cargando...</p>
+
+<!-- Renderiza el detalle solo si existe el objeto 'servicio' -->
+<section *ngIf="servicio">
+  <h2 class="titulo-fuente">{{ servicio.titulo }}</h2>
+  <h5 class="descripcion-fuente">{{ servicio.descripcion }}</h5>
+
+  <!-- Recorre iamgenes de cada servicio segun su id y posicion -->
+  <div class="fotos">
+    <img *ngFor="let i of [1,2,3,4,5,6,7,8,9,10]"
+         [src]="'assets/servicios-detalle/' + servicio.id + '-' + i + '.jpg'"
+         [alt]="servicio.titulo" />
+  </div>
+</section>
+

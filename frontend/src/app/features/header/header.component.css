@@ -1,0 +1,87 @@
+.navbar-brand img {
+  height: 95px; /* Tamaño del logo */
+  width: auto;
+}
+
+/* Fondo de la barra */
+.navbar {
+  width: 100%;        /* que ocupe todo el ancho */
+  max-width: 100%;    /* elimina límites de Bootstrap */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar .container,
+.navbar .container-fluid {
+  max-width: 2400px;   /* más ancho que el estándar */
+  margin: 0 auto;      /* centrado */
+}
+
+/* Logo */
+.navbar-brand .logo {
+  height: 120px;
+  width: auto;
+  color: #DA9B25; /* color parecido al dorado */
+}
+.navbar-brand:hover {
+  color: #DEA53C; /* más oscuro al pasar el ratón */
+}
+
+
+/* Texto del Hero */
+
+.navbar .container-fluid {
+  display: flex;
+  align-items: center;       /* centra verticalmente el contenido */
+  justify-content: space-between; /* mantiene logo y menú en su sitio */
+  position: relative;
+}
+
+.hero {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);  /* centra el texto horizontalmente */
+  text-align: center;
+  top: 10%;                     /* ajusta la altura */
+  margin: 0;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: #555;
+  margin: 0;
+}
+
+
+
+/* Links del menú */
+.nav-link {
+  font-weight: 700;
+  color: #333; /* negro */
+  transition: color 0.2s ease-in-out;
+}
+.nav-link:hover {
+  color: #A67005; /* dorado al pasar el cursor  */
+}
+
+/* Link activo */
+.nav-link.active {
+  color: #FAA916 !important; /* color fijo cuando la ruta está activa, un poco + brillante */
+  border-bottom: 2px solid #C78F2C; /* subrayado */
+}
+
+/* Botón hamburguesa (movil) */
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+

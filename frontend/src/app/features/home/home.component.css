@@ -1,0 +1,503 @@
+.home-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 4fr);
+  gap: 24px;
+  padding: 24px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.container-fluid.px-0 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+
+/* RESPONSIVE (en desarrollo)*/
+/* tablet */
+@media (max-width: 1024px) {
+  .home-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* móvil */
+@media (max-width: 640px) {
+  .home-layout {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
+
+/* CARRUSEL  */
+.carousel {
+  margin-top: 34px !important;
+  width: 100%;
+  max-width: none;
+  transform: scaleX(1.40);           /* escala horizontal al % */
+  transform-origin: center;
+  overflow: hidden;
+  margin: 0 auto;
+
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 600px !important;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+  image-rendering: high-quality;      /* mejora la nitidez en navegadores modernos */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges
+}
+
+
+/* Indicadores del carrusel */
+.carousel-indicators [data-bs-target] {
+  background-color: #708090;
+  opacity: 0.5;
+  overflow: visible;
+
+}
+
+.carousel-indicators .active {
+  background-color: #000000;
+  opacity: 1;
+}
+
+/* Posición del grupo de indicadores */
+.carousel-indicators {
+  bottom: 10px; }
+
+
+/* BOTÓN ANIMADO RESERVAR CITA */
+
+/* Centrado del boton */
+.btn-container {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 70px;
+}
+
+/* Estética del botón */
+.btn-gradient {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 28px;
+  font-weight: 200;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #ff9a9e, #8e44ad);
+  background-size: 200% 200%;
+  transition: all 0.3s ease-in-out;
+  animation: gradient-move 4s ease infinite;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+/* Efecto hover (al pasar el ratón) */
+.btn-gradient:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación de colores */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* SERVICIOS CARDS */
+.servicios .card-img-top {
+  height: 450px;
+  width: 100%;
+
+
+}
+
+.card-img-top {
+  height: 450px;
+  object-fit: cover;
+}
+
+.card {
+  height: 100%;
+}
+
+.servicios h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.servicios {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Estética y animación del card */
+.card {
+  border: bold;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  margin-bottom: 40px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* VIDEO PRESENTACIÓN */
+.titulo-video {
+  margin-top: 80px;
+  margin-bottom: 0;
+}
+
+.video-presentacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.video-home {
+  margin-top: -30px;
+  width: 850px;
+  height: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+
+/* BOTONES REDES SOCIALES */
+
+.titulo-rrhh {
+  margin-top: -20px;
+}
+
+/* Contenedor de iconos */
+.redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+/* Estilo general  */
+.redes-sociales .icono {
+  font-size: 2.6rem;
+  color: #000000;
+  background-color: #f1f1f1;
+  padding: 12px;
+  border-radius: 100%;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover */
+.redes-sociales .icono:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  color: white;
+}
+
+/* colores de cada aplicación */
+.redes-sociales .whatsapp:hover {
+  background-color: #25D366;   /* verde WhatsApp */
+}
+
+.redes-sociales .facebook:hover {
+  background-color: #1877F2;   /* azul Facebook */
+}
+
+.redes-sociales .instagram:hover {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+
+
+/* WIDGET DE MAPS */
+
+/* Contenedor base */
+.section-ubicacion {
+  padding-block: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  inline-size: 100%;
+  max-inline-size: 1100px;
+  margin-inline: auto;
+}
+
+h1#ubicacion-title {
+  text-align: center !important;
+  display: block;
+  width: 100%;
+}
+
+.ubicacion-mapa-wrap {
+  position: relative;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+
+/* Mapa */
+
+.ubicacion-mapa iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+/* Card de información */
+
+.ubicacion-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem 3rem;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* título BU-DAI */
+.ubicacion-card__nombre {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: -1rem;
+}
+
+/* disposición de columnas */
+.ubicacion-card__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.ubicacion-card__col {
+  flex: 1;
+}
+
+/* texto */
+.ubicacion-card__direccion,
+.ubicacion-card__horario {
+  font-size: 1.3rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.ubicacion-card__horario strong {
+  font-size: 1.15rem;
+  color: #111;
+}
+
+/* Responsive: apilado en móvil */
+@media (max-width: 768px) {
+  .ubicacion-card__info {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* WIDGET RESEÑAS */
+
+/* WIDGET RESEÑAS */
+.carrusel-reseñas {
+  background: #fff;
+  padding: 60px 0;
+  position: relative;
+  overflow: visible;
+}
+
+/* Contenedor principal */
+.carrusel-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Cinta del carrusel */
+.carrusel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: mover 40s linear infinite;
+}
+
+/* Tarjeta individual */
+.tarjeta {
+  flex: 0 0 350px;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: scale(1.03);
+}
+
+.logo-google {
+  width: 44px;
+  margin-bottom: 10px;
+}
+
+.estrellas {
+  color: #ffc107;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.texto {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.nombre {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Animación automática */
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pausa animación en hover */
+.carrusel-track:hover {
+  animation-play-state: paused;
+}
+
+/* Botones de control */
+.btn-carrusel {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  color: #F08080;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 10;
+}
+
+.btn-carrusel:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.btn-carrusel.prev {
+  left: 5px;
+}
+
+.btn-carrusel.next {
+  right: 5px;
+}
+
+/* Verificado y botón */
+.verificado {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.icono-verificado {
+  width: 100px;
+}
+
+.btn-reseña {
+  display: center;
+  height: 60px;
+  background-color: #F08080;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.btn-reseña:hover {
+  background-color: #FA8072;
+}
+
+
+
+/* Botón de WhatsApp flotante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25D366; /* verde WhatsApp oficial */
+  color: white;
+  font-size: 2rem;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Fuente de titulos */
+.titulo-fuente {
+  font-family: "Shrikhand", serif;
+  font-weight: 500;
+  font-style: Light 300; /* No se aplica, revisar */
+}

@@ -1,0 +1,29 @@
+<!-- Titulo -->
+<h2 class="titulo-fuente">Servicios</h2>
+<!-- Bucle que recorre el array de servicios sacados de la API-->
+<div class="servicios-grid">
+  <div *ngFor="let s of servicios" class="servicio-item">
+    <!-- muestra el nombre del servicio y la foto segun su indice -->
+    <div class="servicio-info">
+      <a [routerLink]="['/servicios', s.id]" class="titulo">{{ s.titulo }}</a>
+    </div>
+    <div class="servicio-img">
+      <img [src]="'assets/' + s.id + '.jpg' " class="card-img-top" alt="Servicio">
+    </div>
+  </div>
+</div>
+
+<!-- Botón de más servicios -->
+
+<div class="btn-servicios">
+  <a href="https://www.treatwell.es/establecimiento/budai-nails-esthetic/" class="cta">
+    <span>MÁS SERVICIOS</span>
+      <svg width="13px" height="10px" viewBox="0 0 13 10">
+        <path d="M1,5 L11,5"></path>
+        <polyline points="8 1 12 5 8 9"></polyline>
+      </svg>
+  </a>
+</div>
+
+
+

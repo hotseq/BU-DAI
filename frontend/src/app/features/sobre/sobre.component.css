@@ -1,0 +1,35 @@
+.sobre-section {
+  text-align: center;        /* Centra el contenido en su totalidad */
+  max-width: 3000px;          /* Tamaño máximo de la sección */
+  margin: 0 auto;            /* Centra la sección horizontalmente */
+  padding: 40px 20px;
+}
+
+
+/* Imagen principal */
+.sobre-img {
+  width: 100%;                /* Ajusta el tamaño de la foto */
+  max-width: 900px;          /* Límite superior  */
+  height: auto;              /* Mantiene proporción */
+  margin: 10px auto;         /* Centra la imagen */
+  image-rendering: high-quality;           /* Mejoran la nitidez de la foto */
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* Fuente de titulos */
+.titulo-fuente {
+  font-family: "Shrikhand", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* Fuente descripcion */
+.descripcion-fuente {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+

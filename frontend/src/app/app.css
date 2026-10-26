@@ -1,0 +1,16 @@
+/* Estilos globales de la aplicación */
+:root { font-family: system-ui, Arial, sans-serif; color: #111827; }
+body { margin: 0; background: #fafafa; }
+
+/* Estructura y formato general */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 16px; background: #fff; border-bottom: 1px solid #e5e7eb;
+}
+.brand { font-weight: 700; letter-spacing: .3px; text-decoration: none; color: #111827; }
+.spacer { flex: 1; }
+.topbar a { text-decoration: none; color: #374151; padding: 6px 10px; border-radius: 8px; }
+.topbar a.active, .topbar a:hover { background: #eef2ff; color: #1f2937; }
+
+.container { max-width: 1100px; margin: 24px auto; padding: 0 16px; }

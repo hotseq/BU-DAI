@@ -1,0 +1,50 @@
+/* Distribuye los servicios en cuadriculas de los columnas */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;  /* columnas iguales */
+  gap: 2rem;                      /* separación entre elementos */
+  align-items: center;
+}
+
+/* Cada fila tiene su imagen y su enlace */
+.servicio-item {
+  display: flex;
+  justify-content: space-between; /* espaciado entre estas dos */
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #eee; /* linea divisoria */
+}
+
+/* Ocupa espacio restante */
+.servicio-info {
+  flex: 1;
+}
+
+/* Titulo */
+.servicio-info .titulo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #b8860b;
+  text-decoration: none;
+}
+
+/* Al pasar el raton subraya */
+.servicio-info .titulo:hover {
+  text-decoration: underline;
+}
+
+/* Imagen de cada servicio */
+.servicio-img img {
+  width: 120px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Fuente de titulos */
+.titulo-fuente {
+  font-family: "Shrikhand", serif;
+  font-weight: 500;
+  font-style: normal;
+}

@@ -1,0 +1,50 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm w-100">
+  <div class="container-fluid">
+
+    <!-- Logo de Budai - Boton para volver al home -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="/assets/logo dorado budai.png" alt="Logo BU-DAI" class="me-2 logo">
+    </a>
+
+          <!-- Texto de Hero visible solo en el home -->
+    <div class="hero">
+      <h1 *ngIf="isHome">Centro de Estética</h1> <!-- Condicion para que solo se vea en el home -->
+      <p *ngIf="isHome" class="hero-subtitle">Tratamientos faciales y corporales • Belleza & bienestar</p>
+    </div>
+
+    <!-- Boton hamburguesa para el movil -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu del header -->
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto"> <!-- Enlaces alineados a la derecha -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/servicios" routerLinkActive="active">Servicios</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/sobre" routerLinkActive="active">Sobre nosotras</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/galeria" routerLinkActive="active">Galería</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contacto" routerLinkActive="active">Contacto</a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</nav>
+
+
