@@ -25,3 +25,6 @@ Thumbs.db
 
 # Base de datos
 db.sqlite3
+
+# Archivos estáticos generados por Django
+/staticfiles/
